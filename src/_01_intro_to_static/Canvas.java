@@ -56,6 +56,7 @@ public class Canvas {
     }
 
     public void addCircle(Circle circle) {
+    	
         circles.add(circle);
 
         // Must place after adding new circle
@@ -75,7 +76,7 @@ public class Canvas {
             int value = colorSlider.getValue();
             colorSliderLabel.setText("#" + num + " Color" + String.format("%3s", value));
 
-            circles.get(num-1).color = new Color(value, value, value);
+            circles.get(num-1).color = new Color(value, 0, 150);
             frame.repaint();
         });
 
@@ -92,5 +93,7 @@ public class Canvas {
         sliderPanel.add(colorSliderLabel);
         sliderPanel.add(colorSlider);
         frame.pack();
+        
+        
     }
 }
